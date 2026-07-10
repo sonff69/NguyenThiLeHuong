@@ -40,7 +40,7 @@
             background-attachment: fixed;
             color: var(--text-light);
             overflow-x: hidden;
-            line-height: 1.6;
+            line-height: 1.65;
         }
 
         /* Canvas background for falling petals */
@@ -78,7 +78,7 @@
         /* Typography */
         h1, h2, h3, h4 {
             font-family: 'Playfair Display', serif;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.01em;
         }
 
         /* Custom Cursor */
@@ -199,11 +199,11 @@
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
+            min-height: 90vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 120px 8% 60px 8%;
+            padding: 120px 8% 40px 8%;
             position: relative;
         }
 
@@ -214,7 +214,7 @@
             justify-content: space-between;
             width: 100%;
             max-width: 1200px;
-            gap: 50px;
+            gap: 60px;
         }
 
         .hero-text {
@@ -274,10 +274,10 @@
         }
 
         .hero-text h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             line-height: 1.15;
             margin-bottom: 20px;
-            background: linear-gradient(to right, #fff 40%, var(--accent-sakura), var(--accent-cyan));
+            background: linear-gradient(to right, #fff 30%, var(--accent-sakura), var(--accent-cyan));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -330,6 +330,56 @@
             font-size: 1.05rem;
             max-width: 600px;
             margin-bottom: 30px;
+        }
+
+        /* Objectives Section */
+        .objectives-section {
+            padding: 60px 8%;
+            background: rgba(28, 37, 65, 0.4);
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .objectives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto 0 auto;
+        }
+
+        .objective-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 30px;
+            transition: var(--transition-smooth);
+        }
+
+        .objective-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 10px 25px rgba(72, 202, 228, 0.1);
+        }
+
+        .objective-card i {
+            font-size: 2rem;
+            color: var(--accent-sakura);
+            margin-bottom: 15px;
+        }
+
+        .objective-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .objective-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         /* Section Global Layout */
@@ -677,18 +727,16 @@
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-            text-align: center;
         }
 
-        .summary-grid {
+        .summary-blocks {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: 1fr;
             gap: 30px;
             margin-top: 40px;
-            text-align: left;
         }
 
-        .summary-card {
+        .summary-box {
             background: rgba(255,255,255,0.02);
             border: 1px solid rgba(255,255,255,0.05);
             padding: 30px;
@@ -696,27 +744,54 @@
             transition: var(--transition-smooth);
         }
 
-        .summary-card:hover {
-            transform: translateY(-5px);
+        .summary-box:hover {
             border-color: var(--accent-sakura);
             background: rgba(255,255,255,0.04);
         }
 
-        .summary-card i {
-            font-size: 2rem;
-            color: var(--accent-sakura);
-            margin-bottom: 20px;
-        }
-
-        .summary-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
+        .summary-box h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
             color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .summary-card p {
+        .summary-box h3 i {
+            color: var(--accent-sakura);
+        }
+
+        .summary-box p {
             color: var(--text-muted);
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+
+        .grid-3-col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .list-unstyled {
+            list-style: none;
+        }
+
+        .list-unstyled li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
             font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .list-unstyled li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
         }
 
         /* CTA Section for Drive link right before exercises */
@@ -789,8 +864,9 @@
             </a>
             <nav>
                 <a href="#about">Về tôi</a>
-                <a href="#exercises">Hành trình học tập</a>
-                <a href="#summary">Đúc kết</a>
+                <a href="#objectives">Mục tiêu</a>
+                <a href="#exercises">Bài thực hành</a>
+                <a href="#summary">Tổng kết</a>
                 <a href="https://drive.google.com/drive/folders/1Zpts13kSIvvhfGc91rtD0StB7Bjsh6VQ?usp=drive_link" target="_blank" class="btn-drive">
                     <i data-lucide="folder-open"></i> Xem bài tập trên GG drive
                 </a>
@@ -802,7 +878,6 @@
             <div class="hero-content">
                 <div class="hero-avatar-wrapper">
                     <div class="avatar-circle">
-                        <!-- Custom Avatar Placeholder -->
                         <img src="Hình 1.jpg" alt="Nguyễn Thị Lê Hương">
                     </div>
                 </div>
@@ -810,19 +885,12 @@
                     <div class="tagline">
                         <i data-lucide="cpu"></i> Digital Portfolio 2026
                     </div>
-                    <h1>Ngôn Ngữ Giao Thoa<br>Cùng Trí Tuệ Số</h1>
+                    <h1>Nguyễn Thị Lê Hương</h1>
                     <p class="intro-desc">
                         Chào mừng thầy cô và các bạn ghé thăm góc học tập nhỏ của em. Là một sinh viên chuyên ngành ngôn ngữ, việc bước chân vào thế giới của trí tuệ nhân tạo và công nghệ số mang đến một làn gió tươi mới đầy cảm hứng, giúp em tự tay định hình tương lai học thuật của riêng mình.
                     </p>
                     
                     <div class="info-cards">
-                        <div class="info-pill">
-                            <i data-lucide="user"></i>
-                            <div>
-                                <p>Họ & Tên</p>
-                                <p>Nguyễn Thị Lê Hương</p>
-                            </div>
-                        </div>
                         <div class="info-pill">
                             <i data-lucide="hash"></i>
                             <div>
@@ -849,8 +917,34 @@
             </div>
         </section>
 
+        <!-- OBJECTIVES SECTION -->
+        <section class="objectives-section" id="objectives">
+            <div class="section-header">
+                <h2>Sứ Mệnh & Mục Tiêu Portfolio</h2>
+                <p>Một cái nhìn rõ ràng về định hướng bản thân, mục tiêu học tập cùng những mục đích cốt lõi mà Portfolio này hướng tới.</p>
+            </div>
+            
+            <div class="objectives-grid">
+                <div class="objective-card">
+                    <i data-lucide="user-pin"></i>
+                    <h3>Giới thiệu bản thân</h3>
+                    <p>Em là Nguyễn Thị Lê Hương, sinh viên chuyên ngành Ngôn ngữ và Văn hóa Trung Quốc tại trường Đại học Ngoại ngữ - ĐHQGHN. Bản thân em luôn khao khát tìm tòi cái mới, không chỉ giới hạn ở tri thức văn học ngôn ngữ truyền thống mà còn nỗ lực bước ra khỏi vùng an toàn để làm chủ các kỹ năng số thời đại mới.</p>
+                </div>
+                <div class="objective-card">
+                    <i data-lucide="target"></i>
+                    <h3>Định hướng phát triển</h3>
+                    <p>Mục tiêu của em là kết hợp sức mạnh biểu đạt mềm mại của ngôn ngữ học với tính chính xác, hiệu quả của công nghệ thông tin và trí tuệ nhân tạo. Em hướng tới việc trở thành một chuyên gia biên dịch hiện đại, có khả năng tận dụng tối đa các công cụ số để nâng tầm chất lượng và tốc độ xử lý ngôn ngữ.</p>
+                </div>
+                <div class="objective-card">
+                    <i data-lucide="book-marked"></i>
+                    <h3>Mục tiêu Portfolio này</h3>
+                    <p>Portfolio kỹ thuật số này ra đời nhằm hệ thống lại một cách khoa học toàn bộ tiến trình học tập của em trong học phần "Nhập môn công nghệ số và ứng dụng trí tuệ nhân tạo". Đây vừa là không gian lưu trữ kết quả, vừa là minh chứng sống động phản ánh sự tiến bộ và khả năng ứng dụng công nghệ thực tế của em.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- CALL TO ACTION FOR DRIVE BEFORE EXERCISES -->
-        <div class="cta-drive-box">
+        <div class="cta-drive-box" style="margin-top: 60px;">
             <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 12px; font-style: italic;">
                 Toàn bộ dữ liệu thực hành, báo cáo nghiên cứu và tệp đa phương tiện được lưu trữ trực tuyến:
             </p>
@@ -896,7 +990,7 @@
                     <div class="exercise-title-area">
                         <div>
                             <span class="pane-badge">Quản lý & Vận hành</span>
-                            <h3>Làm Chủ Không Gian Số</h3>
+                            <h3>Bài 1: Làm Chủ Không Gian Số</h3>
                         </div>
                     </div>
                     <div class="exercise-grid">
@@ -906,13 +1000,14 @@
                             <div class="highlights">
                                 <h4><i data-lucide="activity"></i> Nhật Ký Thao Tác Hệ Thống</h4>
                                 <ul>
-                                    <li>Khởi tạo thư mục gốc: Định danh chuẩn chỉnh không dấu <code>ThucHanh_NguyenThiLeHuong</code> để tối ưu hoá đường dẫn lưu trữ.</li>
-                                    <li>Tạo dựng văn bản Ghi Chú: Thiết lập tệp tin <code>GhiChu.txt</code>, sau đó chuẩn hoá tên thành <code>GhiChuQuanTrong.txt</code>.</li>
-                                    <li>Phân cấp dữ liệu: Tạo lập thư mục con <code>TaiLieu</code> và vận dụng thao tác Copy & Paste an toàn cho tài liệu mật.</li>
-                                    <li>Phân biệt dọn dẹp bộ nhớ: Trải nghiệm xóa tạm (đưa vào Recycle Bin) đối với tệp tin nháp, và thực hiện xóa vĩnh viễn (Shift + Delete) tệp tin thừa <code>DiChuyen.txt</code> sau khi đã di chuyển để giữ hệ thống tinh gọn nhất.</li>
+                                    <li><strong>Khởi tạo thư mục gốc:</strong> Định danh chuẩn chỉnh không dấu <code>ThucHanh_NguyenThiLeHuong</code> trực tiếp trong phân vùng ổ đĩa dữ liệu không thuộc hệ thống (ổ D:) để tối ưu hoá đường dẫn lưu trữ.</li>
+                                    <li><strong>Tạo lập văn bản Ghi Chú:</strong> Thiết lập tệp tin tài liệu văn bản thô <code>GhiChu.txt</code>, sau đó thực hiện đổi tên (Rename) thành <code>GhiChuQuanTrong.txt</code> một cách nhanh chóng.</li>
+                                    <li><strong>Phân cấp dữ liệu con:</strong> Thiết lập một thư mục nhánh mang tên <code>TaiLieu</code> nằm sâu bên trong cấu trúc thư mục gốc.</li>
+                                    <li><strong>Vận dụng thao tác tệp:</strong> Thực hiện Copy & Paste tệp tin quan trọng vào thư mục tài liệu con. Sau đó kiến tạo tệp tin phụ mang tên <code>DiChuyen.txt</code> và sử dụng lệnh Cut & Paste (Ctrl + X -> Ctrl + V) để đưa tệp sang thư mục mới mà không giữ lại bản gốc.</li>
+                                    <li><strong>Xóa & Phục hồi:</strong> Thử nghiệm xóa tệp tin thường vào Thùng rác (Recycle Bin) để có thể khôi phục lại khi cần thiết, và áp dụng lệnh xóa vĩnh viễn (Shift + Delete) không qua Thùng rác đối với tệp nháp dư thừa nhằm giải phóng bộ nhớ an toàn.</li>
                                 </ul>
                             </div>
-                            <p>Qua bài tập thực hành nhỏ, em thấu hiểu rằng một môi trường làm việc số ngăn nắp chính là khởi nguồn của một tư duy nghiên cứu rõ ràng, mạch lạc.</p>
+                            <p>Qua bài tập thực hành nhỏ này, em thấu hiểu rằng một môi trường làm việc số ngăn nắp chính là khởi nguồn của một tư duy nghiên cứu rõ ràng, mạch lạc.</p>
                         </div>
                         <div class="visual-container">
                             <div class="file-tree-mock">
@@ -934,7 +1029,7 @@
                     <div class="exercise-title-area">
                         <div>
                             <span class="pane-badge">Học thuật chuyên nghiệp</span>
-                            <h3>Con Mắt Tinh Tường: Đánh Giá Thông Tin</h3>
+                            <h3>Bài 2: Đánh Giá Thông Tin Học Thuật</h3>
                         </div>
                     </div>
                     <div class="exercise-grid">
@@ -944,11 +1039,11 @@
                             <div class="highlights">
                                 <h4><i data-lucide="check-square"></i> 5 Tiêu Chí Đánh Giá Cốt Lõi</h4>
                                 <ul>
-                                    <li><strong>Tác giả:</strong> Xác minh học vị, lĩnh vực chuyên sâu của người viết.</li>
-                                    <li><strong>Cơ quan xuất bản:</strong> Độ uy tín của nhà xuất bản hay tạp chí khoa học chuyên ngành.</li>
-                                    <li><strong>Phương pháp nghiên cứu:</strong> Ưu tiên nghiên cứu thực nghiệm và dữ liệu lớn.</li>
-                                    <li><strong>Trích dẫn:</strong> Số lượng phản hồi học thuật từ cộng đồng quốc tế.</li>
-                                    <li><strong>Tính cập nhật:</strong> Đảm bảo thông tin tiệm cận với dòng chảy thời đại số.</li>
+                                    <li><strong>Tác giả:</strong> Xác minh học vị, lĩnh vực chuyên sâu cùng mức độ uy tín học thuật của người viết.</li>
+                                    <li><strong>Cơ quan xuất bản:</strong> Kiểm định độ đáng tin cậy của tạp chí khoa học chuyên ngành hoặc nhà xuất bản đứng sau.</li>
+                                    <li><strong>Phương pháp nghiên cứu:</strong> Ưu tiên nghiên cứu thực nghiệm có dữ liệu lớn và phân tích thống kê rõ ràng.</li>
+                                    <li><strong>Số lượng trích dẫn:</strong> Số lần phản hồi học thuật từ cộng đồng quốc tế thể hiện mức độ ảnh hưởng của bài viết.</li>
+                                    <li><strong>Tính cập nhật:</strong> Thời gian xuất bản phù hợp để đảm bảo số liệu sát thực tế thời đại số.</li>
                                 </ul>
                             </div>
                             <p>Kết quả từ 12 tài liệu tổng hợp bao gồm cả nguồn sách uy tín (như Carr 2010, Turkle 2015), tạp chí học thuật chuyên sâu và số liệu từ OECD giúp em đúc kết góc nhìn hai chiều rõ nét: mạng xã hội vừa có thể hỗ trợ tuyệt vời nếu biết quản lý tốt quỹ thời gian, vừa kéo tuột hiệu suất học tập nếu sa đà lạm dụng.</p>
@@ -966,27 +1061,27 @@
                                 <tbody>
                                     <tr>
                                         <td>Junco (2012)</td>
-                                        <td>Tạp chí</td>
+                                        <td>Tạp chí khoa học</td>
                                         <td>Cao</td>
-                                        <td style="color:#50fa7b;">Rất cao</td>
+                                        <td style="color:#50fa7b; font-weight: 600;">Rất cao</td>
                                     </tr>
                                     <tr>
                                         <td>Turkle (2015)</td>
-                                        <td>Sách</td>
+                                        <td>Sách chuyên khảo</td>
                                         <td>Cao</td>
-                                        <td style="color:#50fa7b;">Rất cao</td>
+                                        <td style="color:#50fa7b; font-weight: 600;">Rất cao</td>
                                     </tr>
                                     <tr>
                                         <td>OECD (2019)</td>
                                         <td>Báo cáo chính thống</td>
                                         <td>Rất cao</td>
-                                        <td style="color:#50fa7b;">Rất cao</td>
+                                        <td style="color:#50fa7b; font-weight: 600;">Rất cao</td>
                                     </tr>
                                     <tr>
                                         <td>Academic Blog</td>
                                         <td>Internet mở</td>
                                         <td>Thấp</td>
-                                        <td style="color:#ffb3c6;">Trung bình</td>
+                                        <td style="color:#ffb3c6; font-weight: 600;">Trung bình</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -999,7 +1094,7 @@
                     <div class="exercise-title-area">
                         <div>
                             <span class="pane-badge">Prompt Engineering</span>
-                            <h3>Nghệ Thuật "Giao Tiếp" Với Trí Tuệ Nhân Tạo</h3>
+                            <h3>Bài 3: Viết Prompt Hiệu Quả Cho Học Tập</h3>
                         </div>
                     </div>
                     <div class="exercise-grid">
@@ -1007,11 +1102,11 @@
                             <p>Để tối ưu hóa sự hỗ trợ từ các mô hình ngôn ngữ lớn như ChatGPT, em đã thực hành thử nghiệm các cấu trúc prompt khác nhau thông qua 3 tác vụ học tập cụ thể. Kết quả cho thấy cách đặt câu hỏi tinh tế sẽ sinh ra những câu trả lời xuất sắc vượt mong đợi.</p>
                             
                             <div class="highlights">
-                                <h4><i data-lucide="cpu"></i> Sự Thần Kỳ Từ Prompt Nâng Cao</h4>
+                                <h4><i data-lucide="cpu"></i> Ba Tác Vụ Thử Nghiệm Thực Tế</h4>
                                 <ul>
-                                    <li><strong>Tóm tắt học thuật (Biến đổi khí hậu):</strong> Chuyển từ tóm tắt cơ bản chung chung sang dạng tóm tắt chuẩn "Giảng viên Khoa học Môi trường" phân nhánh chi tiết kèm ghi chú bài giảng cốt lõi.</li>
-                                    <li><strong>Giải thích khái niệm (Điện toán đám mây):</strong> Nhờ chỉ định nhập vai giảng viên CNTT, từ định nghĩa khô khan, AI đã trả về kết quả mộc mạc, gần gũi nhất cho tân binh với ví dụ minh họa trực quan từ Google Drive, Dropbox và các mô hình IaaS, PaaS, SaaS.</li>
-                                    <li><strong>Kiến tạo đề thi thử (Hệ điều hành):</strong> Thiết lập 15 câu trắc nghiệm với 3 phân khúc phân hóa cực tốt (dễ, trung bình, vận dụng cao) kèm lời giải giải mã chi tiết và đặc biệt là liệt kê các lỗi sai sinh viên thường mắc.</li>
+                                    <li><strong>Tác vụ 1 (Tóm tắt học thuật):</strong> Chuyển đổi từ tóm tắt cơ bản "Hãy tóm tắt bài viết..." thành Prompt nâng cao với vai trò "Giảng viên Khoa học Môi trường" phân nhánh thành các mục Nguyên nhân, Hậu quả, Giải pháp và bảng so sánh trực quan cuối bài giúp hệ thống kiến thức cực kỳ khoa học.</li>
+                                    <li><strong>Tác vụ 2 (Giải thích khái niệm phức tạp):</strong> Trải nghiệm cách giải thích điện toán đám mây (Cloud Computing) từ cấp độ thô cứng sang giải thích bình dân cho sinh viên năm nhất CNTT sử dụng ví dụ từ Google Drive, Dropbox và các mô hình IaaS, PaaS, SaaS.</li>
+                                    <li><strong>Tác vụ 3 (Thiết kế đề ôn thi):</strong> Yêu cầu ChatGPT tạo lập đề kiểm tra hệ điều hành gồm 15 câu trắc nghiệm phân hóa ba mức độ khó kèm đáp án, giải thích chi tiết cùng tổng hợp các lỗi sai phổ biến của sinh viên.</li>
                                 </ul>
                             </div>
                         </div>
@@ -1037,7 +1132,7 @@
                     <div class="exercise-title-area">
                         <div>
                             <span class="pane-badge">Teamwork & Collaboration</span>
-                            <h3>Cộng Tác Trực Tuyến - Sức Mạnh Tập Thể</h3>
+                            <h3>Bài 4: Cộng Tác Trực Tuyến Trong Dự Án Nhóm</h3>
                         </div>
                     </div>
                     <div class="exercise-grid">
@@ -1045,11 +1140,12 @@
                             <p>Trong thời đại học tập kết hợp, kỹ năng phối hợp làm việc nhóm trực tuyến là vô cùng sống còn. Em đã áp dụng bộ công cụ số để hiện thực hóa dự án nghiên cứu: <strong>"Ứng dụng AI vào việc học ngoại ngữ của sinh viên trường Đại học Ngoại ngữ - ĐHQGHN"</strong> cùng 5 người bạn.</p>
                             
                             <div class="highlights">
-                                <h4><i data-lucide="layers"></i> 4 Bệ Phóng Số Hợp Tác</h4>
+                                <h4><i data-lucide="layers"></i> Trải Nghiệm 4 Công Cụ Hợp Tác</h4>
                                 <ul>
-                                    <li><strong>Trello:</strong> Giúp nhóm phân công, quản lý tiến độ trực quan, rõ ràng, gạt bỏ lo lắng quên deadline.</li>
-                                    <li><strong>Google Docs & Drive:</strong> Đồng sáng tạo nội dung thời gian thực, lưu trữ thông tin không thất lạc dưới một quy chuẩn đặt tên tệp thống nhất để tránh trùng lặp phiên bản.</li>
-                                    <li><strong>Discord & Google Meet:</strong> Duy trì kết nối liên lạc nhanh chóng, phân nhóm phòng họp nhỏ tối ưu cho các phiên bão não dữ dội.</li>
+                                    <li><strong>Trello:</strong> Giúp nhóm phân công, phân cấp và quản lý tiến độ trực quan, gạt bỏ lo lắng quên deadline.</li>
+                                    <li><strong>Google Docs:</strong> Cho phép đồng soạn thảo nội dung báo cáo thời gian thực, lưu lại lịch sử chỉnh sửa chi tiết và dễ dàng phản hồi bình luận từ các thành viên.</li>
+                                    <li><strong>Google Drive:</strong> Hệ thống hóa không gian lưu trữ tài liệu dưới một quy chuẩn đặt tên tệp thống nhất để hạn chế tối đa việc trùng lặp phiên bản.</li>
+                                    <li><strong>Discord & Google Meet:</strong> Duy trì liên lạc thông báo nhanh chóng, trao đổi học nhóm định kỳ hiệu quả.</li>
                                 </ul>
                             </div>
                             <p>Dù gặp khó khăn ban đầu về xung đột phiên bản và giao diện mới của Trello, bằng cách thảo luận thẳng thắn, đưa ra quy chế ghim tin quan trọng và phân quyền rõ ràng trên Docs, nhóm em đã hoàn thành dự án xuất sắc.</p>
@@ -1058,15 +1154,15 @@
                             <div class="diary-timeline">
                                 <div class="diary-item">
                                     <p class="diary-date">01/06/2026</p>
-                                    <p class="diary-desc">Nhận nhiệm vụ nghiên cứu, phân công trên Trello</p>
+                                    <p class="diary-desc">Nhận nhiệm vụ nghiên cứu, phân công công việc chi tiết trên Trello</p>
                                 </div>
                                 <div class="diary-item">
                                     <p class="diary-date">04/06/2026</p>
-                                    <p class="diary-desc">Tìm tài liệu học thuật về AI, đẩy lên thư mục chung Google Drive</p>
+                                    <p class="diary-desc">Tìm kiếm tài liệu học thuật về AI học ngoại ngữ, đẩy lên Google Drive</p>
                                 </div>
                                 <div class="diary-item">
                                     <p class="diary-date">07/06/2026</p>
-                                    <p class="diary-desc">Viết bài báo cáo tổng quan trực tiếp trên Google Docs</p>
+                                    <p class="diary-desc">Cùng viết bài báo cáo tổng quan trực tiếp trên Google Docs</p>
                                 </div>
                                 <div class="diary-item">
                                     <p class="diary-date">15/06/2026</p>
@@ -1082,7 +1178,7 @@
                     <div class="exercise-title-area">
                         <div>
                             <span class="pane-badge">Generative AI</span>
-                            <h3>Điểm Chạm Sáng Tạo: Trí Tuệ & Thẩm Mỹ</h3>
+                            <h3>Bài 5: Sáng Tạo Nội Dung Với Generative AI</h3>
                         </div>
                     </div>
                     <div class="exercise-grid">
@@ -1099,7 +1195,6 @@
                             <p>Trải nghiệm này củng cố sâu sắc triết lý: AI là cọ vẽ, còn con người mới thực sự là nghệ sĩ cầm cọ thổi hồn cho tác phẩm nghệ thuật.</p>
                         </div>
                         <div class="visual-container">
-                            <!-- Visual depiction of human-AI collaboration -->
                             <div style="text-align: center;">
                                 <div style="display:flex; justify-content:space-around; align-items:center; gap: 20px; margin-bottom: 20px;">
                                     <div style="background: rgba(72,202,228,0.1); border: 1px solid var(--accent-cyan); padding: 15px; border-radius: 50%; width: 100px; height: 100px; display:flex; flex-direction:column; justify-content:center; align-items:center;">
@@ -1123,7 +1218,7 @@
                     <div class="exercise-title-area">
                         <div>
                             <span class="pane-badge">Academic Integrity</span>
-                            <h3>Sử Dụng AI Có Trách Nhiệm</h3>
+                            <h3>Bài 6: Sử Dụng AI Có Trách Nhiệm</h3>
                         </div>
                     </div>
                     <div class="exercise-grid">
@@ -1163,24 +1258,56 @@
 
             <div class="summary-container">
                 <p class="intro-desc" style="max-width: 800px; margin: 0 auto 30px auto; font-size: 1.1rem; line-height: 1.8;">
-                    Hành trình này mở ra cho em một góc nhìn mới: Công nghệ không làm mất đi vẻ đẹp bay bổng của ngôn ngữ, mà ngược lại, nó là đôi cánh thông thái giúp các giá trị nhân văn được lan tỏa xa hơn, chuyên nghiệp hơn trong kỷ nguyên số 2026.
+                    Học tập không chỉ là tiếp thu kiến thức, mà là học cách thích nghi với sự thay đổi của thời đại. Dưới đây là những tổng kết thực tế từ trải nghiệm cá nhân của em.
                 </p>
 
-                <div class="summary-grid">
-                    <div class="summary-card">
-                        <i data-lucide="brain-circuit"></i>
-                        <h3>Định hình Tư duy Số</h3>
-                        <p>Từ một sinh viên ngôn ngữ bỡ ngỡ với cấu trúc dữ liệu, em đã học cách giải quyết vấn đề hệ thống, biết quản trị thông tin khoa học và tự tin thiết kế những prompt chuyên biệt phục vụ đắc lực cho công tác nghiên cứu khoa học.</p>
+                <div class="summary-blocks">
+                    <!-- Thuận lợi -->
+                    <div class="summary-box">
+                        <h3><i data-lucide="thumbs-up"></i> Thuận lợi</h3>
+                        <div class="grid-3-col">
+                            <div>
+                                <p style="font-weight: 600; color: #ffffff; margin-bottom: 5px;">Học liệu và công cụ hiện đại</p>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">Được tiếp cận sớm với các công cụ hàng đầu (ChatGPT, Trello, Google Suite) giúp tối ưu hóa đáng kể quy trình xử lý công việc học thuật hàng ngày.</p>
+                            </div>
+                            <div>
+                                <p style="font-weight: 600; color: #ffffff; margin-bottom: 5px;">Môi trường học tập cởi mở</p>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">Trường Đại học Ngoại ngữ luôn khuyến khích sinh viên khai phóng tư duy số, tạo điều kiện thuận lợi cho việc nghiên cứu và thử nghiệm công nghệ.</p>
+                            </div>
+                            <div>
+                                <p style="font-weight: 600; color: #ffffff; margin-bottom: 5px;">Sự hỗ trợ từ đồng đội</p>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">Làm việc nhóm cùng những người bạn tâm huyết giúp giải quyết hiệu quả các bài toán khó và cùng tiến bộ trong suốt quá trình thực hành.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="summary-card">
-                        <i data-lucide="award"></i>
-                        <h3>Tác Phong Chuyên Nghiệp</h3>
-                        <p>Làm việc nhóm xuyên không gian qua Trello, Slack, Google Docs đã mài sắc tinh thần trách nhiệm, nâng tầm giao tiếp ứng xử văn minh số và giúp em biết cách dung hòa cái tôi nghệ thuật để hướng tới mục tiêu chung của cả tập thể.</p>
+
+                    <!-- Khó khăn -->
+                    <div class="summary-box">
+                        <h3><i data-lucide="alert-triangle"></i> Khó khăn</h3>
+                        <div class="grid-3-col">
+                            <div>
+                                <p style="font-weight: 600; color: #ffffff; margin-bottom: 5px;">Xung đột dữ liệu khi cộng tác</p>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">Việc nhiều thành viên cùng chỉnh sửa báo cáo thời gian thực trên Docs đôi khi dẫn đến đè lấp thông tin trước khi đưa ra quy chế phân công cụ thể.</p>
+                            </div>
+                            <div>
+                                <p style="font-weight: 600; color: #ffffff; margin-bottom: 5px;">Tính ảo tưởng của mô hình AI</p>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">Trí tuệ nhân tạo đôi khi đưa ra các thông tin mơ hồ, thiếu chính xác (hallucination) buộc em phải dành nhiều thời gian kiểm chứng học thuật thủ công.</p>
+                            </div>
+                            <div>
+                                <p style="font-weight: 600; color: #ffffff; margin-bottom: 5px;">Làm quen với các công cụ mới</p>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">Giao diện phân chia thẻ công việc của Trello lúc đầu khá xa lạ đối với một sinh viên ngôn ngữ chuyên ngành, đòi hỏi thời gian tự nghiên cứu tìm hiểu.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="summary-card">
-                        <i data-lucide="heart"></i>
-                        <h3>Khát vọng Tương lai</h3>
-                        <p>Cảm xúc bứt phá giới hạn học thuật thôi thúc em sẽ không ngừng khai thác AI có đạo đức trong học tập ngôn ngữ Trung Quốc sắp tới, tự tin hướng tới hình ảnh một nhà dịch thuật hiện đại, bản lĩnh và nhạy bén số.</p>
+
+                    <!-- Bài học kinh nghiệm -->
+                    <div class="summary-box">
+                        <h3><i data-lucide="graduation-cap"></i> Bài học kinh nghiệm</h3>
+                        <ul class="list-unstyled">
+                            <li><strong>Chủ động làm chủ công nghệ:</strong> Hiểu rõ AI chỉ là người trợ lý đắc lực hỗ trợ tăng tốc, tư duy phản biện của con người mới là yếu tố quyết định chất lượng cuối cùng của sản phẩm.</li>
+                            <li><strong>Nguyên tắc giao tiếp rõ ràng:</strong> Quản lý nhóm thành công đòi hỏi sự phối hợp nhịp nhàng, quy tắc ghim tin rõ ràng trên các nền tảng trao đổi và tôn trọng sự đóng góp của mọi cá nhân.</li>
+                            <li><strong>Ý thức cao về tính trung thực:</strong> Luôn trích dẫn nguồn đầy đủ, minh bạch thông tin tham vấn AI để giữ vững giá trị liêm chính học thuật trong nhà trường.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
