@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyễn Thị Lê Hương - Digital Portfolio</title>
+    <title>Nguyễn Thị Lê Hương Portfolio</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!-- Lucide Icons CDN -->
@@ -54,7 +54,6 @@
             pointer-events: none;
         }
 
-        /* Layout wrapper */
         .app-container {
             position: relative;
             z-index: 2;
@@ -580,7 +579,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 300px;
+            min-height: 350px;
             position: relative;
             overflow: hidden;
         }
@@ -600,6 +599,7 @@
             gap: 10px;
             padding-left: 20px;
             position: relative;
+            transition: var(--transition-smooth);
         }
 
         .tree-node i {
@@ -801,6 +801,132 @@
             animation: pulseGlow 3s infinite;
         }
 
+        /* Interactive Simulator Styles (Exercise 1) */
+        .sim-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            width: 100%;
+            gap: 15px;
+        }
+
+        .sim-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition-smooth);
+        }
+
+        .sim-btn:hover:not(:disabled) {
+            background: var(--accent-cyan);
+            color: var(--primary-dark);
+            border-color: transparent;
+        }
+
+        .sim-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        /* Interactive Filter Library Styles (Exercise 2) */
+        .filter-nav {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            color: var(--text-muted);
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--accent-sakura);
+            color: var(--primary-dark);
+            border-color: transparent;
+        }
+
+        /* Interactive Prompt Switcher (Exercise 3) */
+        .prompt-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        .prompt-tab {
+            flex: 1;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--glass-border);
+            color: var(--text-muted);
+            padding: 8px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 0.8rem;
+            border-radius: 10px;
+            transition: var(--transition-smooth);
+        }
+
+        .prompt-tab.active {
+            background: rgba(72, 202, 228, 0.1);
+            color: var(--accent-cyan);
+            border-color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        /* Ethical Rules Grid (Exercise 6) */
+        .ethics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .ethics-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 12px;
+            transition: var(--transition-smooth);
+        }
+
+        .ethics-card.dos {
+            border-left: 3px solid #06d6a0;
+        }
+
+        .ethics-card.donts {
+            border-left: 3px solid #ef476f;
+        }
+
+        .ethics-card h5 {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+
+        .ethics-card p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
         /* Footer */
         footer {
             padding: 40px 8%;
@@ -928,7 +1054,7 @@
                 <div class="objective-card">
                     <i data-lucide="user-pin"></i>
                     <h3>Giới thiệu bản thân</h3>
-                    <p>Em là Nguyễn Thị Lê Hương, sinh viên chuyên ngành Ngôn ngữ và Văn hóa Trung Quốc tại trường Đại học Ngoại ngữ - ĐHQGHN. Bản thân em luôn khao khát tìm tòi cái mới, không chỉ giới hạn ở tri thức văn học ngôn ngữ truyền thống mà còn nỗ lực bước ra khỏi vùng an toàn để làm chủ các kỹ năng số thời đại mới.</p>
+                    <p>Em là Nguyễn Thị Lê Hương, sinh viên chuyên ngành Ngôn ngữ và Văn hóa Trung Quốc tại trường Đại học Ngoại ngữ - ĐHQGHN [1, 2]. Bản thân em luôn khao khát tìm tòi cái mới, không chỉ giới hạn ở tri thức văn học ngôn ngữ truyền thống mà còn nỗ lực bước ra khỏi vùng an toàn để làm chủ các kỹ năng số thời đại mới.</p>
                 </div>
                 <div class="objective-card">
                     <i data-lucide="target"></i>
@@ -938,7 +1064,7 @@
                 <div class="objective-card">
                     <i data-lucide="book-marked"></i>
                     <h3>Mục tiêu Portfolio này</h3>
-                    <p>Portfolio kỹ thuật số này ra đời nhằm hệ thống lại một cách khoa học toàn bộ tiến trình học tập của em trong học phần "Nhập môn công nghệ số và ứng dụng trí tuệ nhân tạo". Đây vừa là không gian lưu trữ kết quả, vừa là minh chứng sống động phản ánh sự tiến bộ và khả năng ứng dụng công nghệ thực tế của em.</p>
+                    <p>Portfolio kỹ thuật số này ra đời nhằm hệ thống lại một cách khoa học toàn bộ tiến trình học tập của em trong học phần "Nhập môn công nghệ số và ứng dụng trí tuệ nhân tạo" [1, 2]. Đây vừa là không gian lưu trữ kết quả, vừa là minh chứng sống động phản ánh sự tiến bộ và khả năng ứng dụng công nghệ thực tế của em.</p>
                 </div>
             </div>
         </section>
@@ -990,35 +1116,30 @@
                     <div class="exercise-title-area">
                         <div>
                             <span class="pane-badge">Quản lý & Vận hành</span>
-                            <h3>Bài 1: Làm Chủ Không Gian Số</h3>
+                            <h3>Bài 1: Thao tác cơ bản với tệp tin và thư mục</h3>
                         </div>
                     </div>
                     <div class="exercise-grid">
                         <div class="exercise-content-text">
-                            <p><strong>Quản lý tài nguyên lưu trữ khoa học</strong> là nền móng đầu tiên của mọi nhà nghiên cứu số. Trong buổi thực hành này, em đã xây dựng cấu trúc thư mục học tập logic trực tiếp trên hệ thống Windows File Explorer.</p>
+                            <p><strong>Quản lý không gian lưu trữ số khoa học</strong> là nền móng đầu tiên của một người học hiện đại. Em đã thực hiện đầy đủ và chính xác 12 bước chuẩn hóa quy trình quản lý tệp tin trên Windows [1].</p>
                             
-                            <div class="highlights">
-                                <h4><i data-lucide="activity"></i> Nhật Ký Thao Tác Hệ Thống</h4>
-                                <ul>
-                                    <li><strong>Khởi tạo thư mục gốc:</strong> Định danh chuẩn chỉnh không dấu <code>ThucHanh_NguyenThiLeHuong</code> trực tiếp trong phân vùng ổ đĩa dữ liệu không thuộc hệ thống (ổ D:) để tối ưu hoá đường dẫn lưu trữ.</li>
-                                    <li><strong>Tạo lập văn bản Ghi Chú:</strong> Thiết lập tệp tin tài liệu văn bản thô <code>GhiChu.txt</code>, sau đó thực hiện đổi tên (Rename) thành <code>GhiChuQuanTrong.txt</code> một cách nhanh chóng.</li>
-                                    <li><strong>Phân cấp dữ liệu con:</strong> Thiết lập một thư mục nhánh mang tên <code>TaiLieu</code> nằm sâu bên trong cấu trúc thư mục gốc.</li>
-                                    <li><strong>Vận dụng thao tác tệp:</strong> Thực hiện Copy & Paste tệp tin quan trọng vào thư mục tài liệu con. Sau đó kiến tạo tệp tin phụ mang tên <code>DiChuyen.txt</code> và sử dụng lệnh Cut & Paste (Ctrl + X -> Ctrl + V) để đưa tệp sang thư mục mới mà không giữ lại bản gốc.</li>
-                                    <li><strong>Xóa & Phục hồi:</strong> Thử nghiệm xóa tệp tin thường vào Thùng rác (Recycle Bin) để có thể khôi phục lại khi cần thiết, và áp dụng lệnh xóa vĩnh viễn (Shift + Delete) không qua Thùng rác đối với tệp nháp dư thừa nhằm giải phóng bộ nhớ an toàn.</li>
-                                </ul>
+                            <div class="highlights" style="margin: 15px 0;">
+                                <h4 id="sim-step-title"><i data-lucide="play-circle"></i> Bước 1: Mở File Explorer</h4>
+                                <p id="sim-step-desc" style="font-size: 0.9rem; color: var(--text-light); margin: 5px 0 0 0;">Nhấn tổ hợp phím Windows + E hoặc nhấp chọn biểu tượng thư mục màu vàng trên thanh tác vụ của Windows [1].</p>
                             </div>
-                            <p>Qua bài tập thực hành nhỏ này, em thấu hiểu rằng một môi trường làm việc số ngăn nắp chính là khởi nguồn của một tư duy nghiên cứu rõ ràng, mạch lạc.</p>
+                            <p style="font-size: 0.9rem; font-style: italic;">Sử dụng bộ điều khiển bên phải để trải nghiệm quy trình giả lập 12 bước học máy tính của Hương [1].</p>
                         </div>
                         <div class="visual-container">
-                            <div class="file-tree-mock">
-                                <p style="color: #6272a4; margin-bottom: 10px;">// Cấu trúc thư mục Windows</p>
-                                <div class="tree-node"><i data-lucide="folder"></i> OS (C:)</div>
-                                <div class="tree-node"><i data-lucide="folder"></i> New Volume (D:)</div>
-                                <div class="tree-node" style="padding-left: 40px;"><i data-lucide="folder-open"></i> ThucHanh_NguyenThiLeHuong</div>
-                                <div class="tree-node" style="padding-left: 60px;"><i data-lucide="folder"></i> TaiLieu</div>
-                                <div class="tree-node file" style="padding-left: 80px;"><i data-lucide="file-text"></i> GhiChuQuanTrong.txt</div>
-                                <div class="tree-node file" style="padding-left: 80px;"><i data-lucide="file-text"></i> DiChuyen.txt <span style="color:#ff5555; font-size:0.75rem;">(Đã xóa vĩnh viễn)</span></div>
-                                <div class="tree-node file" style="padding-left: 60px;"><i data-lucide="file-text"></i> GhiChuQuanTrong.txt <span style="color: #50fa7b; font-size: 0.75rem;">(Bản sao lưu)</span></div>
+                            <div class="file-tree-mock" id="simulator-mockup">
+                                <!-- Step 1 Simulated Visuals -->
+                                <p style="color: #6272a4; margin-bottom: 10px;">// Trạng thái File Explorer [1]</p>
+                                <div class="tree-node"><i data-lucide="monitor"></i> This PC</div>
+                                <div class="tree-node" style="padding-left: 40px; color: var(--accent-cyan); font-weight: bold;"><i data-lucide="folder-search"></i> File Explorer (Đã kích hoạt)</div>
+                            </div>
+                            <div class="sim-controls">
+                                <button class="sim-btn" id="sim-prev" onclick="prevStep()" disabled><i data-lucide="arrow-left"></i> Lùi lại</button>
+                                <span style="font-size: 0.8rem; font-weight: bold;" id="sim-indicator">Bước 1 / 12</span>
+                                <button class="sim-btn" id="sim-next" onclick="nextStep()">Kế tiếp <i data-lucide="arrow-right"></i></button>
                             </div>
                         </div>
                     </div>
@@ -1029,62 +1150,31 @@
                     <div class="exercise-title-area">
                         <div>
                             <span class="pane-badge">Học thuật chuyên nghiệp</span>
-                            <h3>Bài 2: Đánh Giá Thông Tin Học Thuật</h3>
+                            <h3>Bài 2: Đánh Giá Nguồn Học Thuật</h3>
                         </div>
                     </div>
                     <div class="exercise-grid">
                         <div class="exercise-content-text">
-                            <p>Đứng trước biển tri thức mênh mông trên Internet, đặc biệt là về chủ đề nóng hổi: <strong>"Ảnh hưởng của mạng xã hội đến kết quả học tập của sinh viên"</strong>, em học cách không vội vàng tin tưởng mọi bài viết trôi nổi mà xây dựng một bộ lọc thông tin gồm 12 nguồn tư liệu được tuyển chọn khắt khe.</p>
+                            <p>Đứng trước biển tri thức mênh mông, em nghiên cứu đề tài: <strong>"Ảnh hưởng của mạng xã hội đến học tập của sinh viên"</strong> và sàng lọc 12 nguồn học thuật theo 5 tiêu chí: *Tác giả, NXB, Phương pháp, Trích dẫn và Tính cập nhật* [1, 2].</p>
                             
                             <div class="highlights">
-                                <h4><i data-lucide="check-square"></i> 5 Tiêu Chí Đánh Giá Cốt Lõi</h4>
-                                <ul>
-                                    <li><strong>Tác giả:</strong> Xác minh học vị, lĩnh vực chuyên sâu cùng mức độ uy tín học thuật của người viết.</li>
-                                    <li><strong>Cơ quan xuất bản:</strong> Kiểm định độ đáng tin cậy của tạp chí khoa học chuyên ngành hoặc nhà xuất bản đứng sau.</li>
-                                    <li><strong>Phương pháp nghiên cứu:</strong> Ưu tiên nghiên cứu thực nghiệm có dữ liệu lớn và phân tích thống kê rõ ràng.</li>
-                                    <li><strong>Số lượng trích dẫn:</strong> Số lần phản hồi học thuật từ cộng đồng quốc tế thể hiện mức độ ảnh hưởng của bài viết.</li>
-                                    <li><strong>Tính cập nhật:</strong> Thời gian xuất bản phù hợp để đảm bảo số liệu sát thực tế thời đại số.</li>
-                                </ul>
+                                <h4><i data-lucide="check-square"></i> Đúc Kết Phân Tích</h4>
+                                <p style="font-size: 0.92rem; margin: 0;">Các bài báo khoa học được bình duyệt khắt khe (như Junco 2012, Rosen 2013) có độ tin cậy vượt trội so với các blog cá nhân trực tuyến mở [1, 3]. Điều này giúp em có cái nhìn phản biện hai chiều vững chắc [1].</p>
                             </div>
-                            <p>Kết quả từ 12 tài liệu tổng hợp bao gồm cả nguồn sách uy tín (như Carr 2010, Turkle 2015), tạp chí học thuật chuyên sâu và số liệu từ OECD giúp em đúc kết góc nhìn hai chiều rõ nét: mạng xã hội vừa có thể hỗ trợ tuyệt vời nếu biết quản lý tốt quỹ thời gian, vừa kéo tuột hiệu suất học tập nếu sa đà lạm dụng.</p>
                         </div>
-                        <div class="visual-container" style="overflow-x: auto;">
-                            <table class="academic-table">
-                                <thead>
-                                    <tr>
-                                        <th>Tài liệu</th>
-                                        <th>Loại nguồn</th>
-                                        <th>Trích dẫn</th>
-                                        <th>Độ tin cậy</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Junco (2012)</td>
-                                        <td>Tạp chí khoa học</td>
-                                        <td>Cao</td>
-                                        <td style="color:#50fa7b; font-weight: 600;">Rất cao</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Turkle (2015)</td>
-                                        <td>Sách chuyên khảo</td>
-                                        <td>Cao</td>
-                                        <td style="color:#50fa7b; font-weight: 600;">Rất cao</td>
-                                    </tr>
-                                    <tr>
-                                        <td>OECD (2019)</td>
-                                        <td>Báo cáo chính thống</td>
-                                        <td>Rất cao</td>
-                                        <td style="color:#50fa7b; font-weight: 600;">Rất cao</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Academic Blog</td>
-                                        <td>Internet mở</td>
-                                        <td>Thấp</td>
-                                        <td style="color:#ffb3c6; font-weight: 600;">Trung bình</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="visual-container" style="justify-content: flex-start; padding: 15px;">
+                            <div class="filter-nav">
+                                <button class="filter-btn active" onclick="filterSources('all')">Tất cả (12)</button>
+                                <button class="filter-btn" onclick="filterSources('journal')">Tạp chí (6)</button>
+                                <button class="filter-btn" onclick="filterSources('book')">Sách (2)</button>
+                                <button class="filter-btn" onclick="filterSources('report')">Báo cáo (2)</button>
+                                <button class="filter-btn" onclick="filterSources('web')">Web/Blog (2)</button>
+                            </div>
+                            <div style="width:100%; overflow-x:auto;">
+                                <table class="academic-table" id="academic-eval-table">
+                                    <!-- Populated dynamically via JS -->
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1094,33 +1184,40 @@
                     <div class="exercise-title-area">
                         <div>
                             <span class="pane-badge">Prompt Engineering</span>
-                            <h3>Bài 3: Viết Prompt Hiệu Quả Cho Học Tập</h3>
+                            <h3>Bài 3: Thử Nghiệm Prompt Học Tập</h3>
                         </div>
                     </div>
                     <div class="exercise-grid">
                         <div class="exercise-content-text">
-                            <p>Để tối ưu hóa sự hỗ trợ từ các mô hình ngôn ngữ lớn như ChatGPT, em đã thực hành thử nghiệm các cấu trúc prompt khác nhau thông qua 3 tác vụ học tập cụ thể. Kết quả cho thấy cách đặt câu hỏi tinh tế sẽ sinh ra những câu trả lời xuất sắc vượt mong đợi.</p>
+                            <p>Em thực hành cải tiến cấu trúc câu lệnh qua 3 tác vụ học tập [1]. Sự thay đổi từ Prompt cơ bản sang Prompt nâng cao đem lại bước nhảy vọt về chiều sâu nội dung hiển thị [1].</p>
                             
                             <div class="highlights">
-                                <h4><i data-lucide="cpu"></i> Ba Tác Vụ Thử Nghiệm Thực Tế</h4>
-                                <ul>
-                                    <li><strong>Tác vụ 1 (Tóm tắt học thuật):</strong> Chuyển đổi từ tóm tắt cơ bản "Hãy tóm tắt bài viết..." thành Prompt nâng cao với vai trò "Giảng viên Khoa học Môi trường" phân nhánh thành các mục Nguyên nhân, Hậu quả, Giải pháp và bảng so sánh trực quan cuối bài giúp hệ thống kiến thức cực kỳ khoa học.</li>
-                                    <li><strong>Tác vụ 2 (Giải thích khái niệm phức tạp):</strong> Trải nghiệm cách giải thích điện toán đám mây (Cloud Computing) từ cấp độ thô cứng sang giải thích bình dân cho sinh viên năm nhất CNTT sử dụng ví dụ từ Google Drive, Dropbox và các mô hình IaaS, PaaS, SaaS.</li>
-                                    <li><strong>Tác vụ 3 (Thiết kế đề ôn thi):</strong> Yêu cầu ChatGPT tạo lập đề kiểm tra hệ điều hành gồm 15 câu trắc nghiệm phân hóa ba mức độ khó kèm đáp án, giải thích chi tiết cùng tổng hợp các lỗi sai phổ biến của sinh viên.</li>
+                                <h4><i data-lucide="trending-up"></i> 3 Tác Vụ Đã Thử Nghiệm:</h4>
+                                <ul style="font-size: 0.9rem;">
+                                    <li><strong>Tác vụ 1:</strong> Tóm tắt "Climate Change" thành 300 từ dạng mục chi tiết [1].</li>
+                                    <li><strong>Tác vụ 2:</strong> Giải thích bình dân "Cloud Computing" cho SV năm nhất [1].</li>
+                                    <li><strong>Tác vụ 3:</strong> Tạo 15 câu trắc nghiệm OS phân hóa kèm đáp án [1].</li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="visual-container">
+                        <div class="visual-container" style="justify-content: flex-start;">
+                            <div class="prompt-tabs">
+                                <div class="prompt-tab active" onclick="switchPromptTask(1)">Tác vụ 1</div>
+                                <div class="prompt-tab" onclick="switchPromptTask(2)">Tác vụ 2</div>
+                                <div class="prompt-tab" onclick="switchPromptTask(3)">Tác vụ 3</div>
+                            </div>
                             <div style="width: 100%;">
                                 <div class="prompt-box">
                                     <div class="prompt-header">
-                                        <span style="font-size:0.8rem; font-weight:700;">Ví dụ prompt nâng cao của Hương:</span>
-                                        <span class="prompt-badge badge-advanced">Advanced roleplay</span>
+                                        <span id="prompt-level-title">Cơ bản</span>
+                                        <span class="prompt-badge badge-basic" id="prompt-level-badge">Basic</span>
                                     </div>
-                                    <p class="prompt-code">"Bạn là giảng viên môn Khoa học Môi trường. Hãy tóm tắt bài viết này theo các mục Nguyên nhân, Hậu quả, Giải pháp; chỉ giữ ý quan trọng; liệt kê 5 từ khóa; thêm câu ghi nhớ sau mỗi mục..."</p>
+                                    <p class="prompt-code" id="prompt-display-box">Hãy tóm tắt bài viết "Climate Change and Global Warming".</p>
                                 </div>
-                                <div style="font-size: 0.8rem; color: var(--accent-mint); text-align: center; margin-top: 10px;">
-                                    <i data-lucide="check-circle-2"></i> Trải nghiệm cá nhân hóa học tập hiệu quả gấp 3 lần!
+                                <div style="display:flex; justify-content: space-between; margin-top: 10px;">
+                                    <button class="sim-btn" onclick="changePromptLevel('basic')">Cơ bản</button>
+                                    <button class="sim-btn" onclick="changePromptLevel('improved')">Cải tiến</button>
+                                    <button class="sim-btn" onclick="changePromptLevel('advanced')">Nâng cao</button>
                                 </div>
                             </div>
                         </div>
@@ -1132,41 +1229,40 @@
                     <div class="exercise-title-area">
                         <div>
                             <span class="pane-badge">Teamwork & Collaboration</span>
-                            <h3>Bài 4: Cộng Tác Trực Tuyến Trong Dự Án Nhóm</h3>
+                            <h3>Bài 4: Sử Dụng Các Công Cụ Hợp Tác Trực Tuyến</h3>
                         </div>
                     </div>
                     <div class="exercise-grid">
                         <div class="exercise-content-text">
-                            <p>Trong thời đại học tập kết hợp, kỹ năng phối hợp làm việc nhóm trực tuyến là vô cùng sống còn. Em đã áp dụng bộ công cụ số để hiện thực hóa dự án nghiên cứu: <strong>"Ứng dụng AI vào việc học ngoại ngữ của sinh viên trường Đại học Ngoại ngữ - ĐHQGHN"</strong> cùng 5 người bạn.</p>
+                            <p>Khi thực hiện dự án nhóm <strong>"Ứng dụng AI vào việc học ngoại ngữ của sinh viên ULIS"</strong>, em chịu trách nhiệm tìm học liệu, viết tổng quan, thiết kế slide và tổng hợp bài viết báo cáo [1].</p>
                             
                             <div class="highlights">
-                                <h4><i data-lucide="layers"></i> Trải Nghiệm 4 Công Cụ Hợp Tác</h4>
-                                <ul>
-                                    <li><strong>Trello:</strong> Giúp nhóm phân công, phân cấp và quản lý tiến độ trực quan, gạt bỏ lo lắng quên deadline.</li>
-                                    <li><strong>Google Docs:</strong> Cho phép đồng soạn thảo nội dung báo cáo thời gian thực, lưu lại lịch sử chỉnh sửa chi tiết và dễ dàng phản hồi bình luận từ các thành viên.</li>
-                                    <li><strong>Google Drive:</strong> Hệ thống hóa không gian lưu trữ tài liệu dưới một quy chuẩn đặt tên tệp thống nhất để hạn chế tối đa việc trùng lặp phiên bản.</li>
-                                    <li><strong>Discord & Google Meet:</strong> Duy trì liên lạc thông báo nhanh chóng, trao đổi học nhóm định kỳ hiệu quả.</li>
+                                <h4><i data-lucide="layers"></i> Hệ Thống Công Cụ Nhóm</h4>
+                                <ul style="font-size: 0.9rem;">
+                                    <li><strong>Trello:</strong> Tiếp nhận task, phân phối lịch trình, quản lý deadline [1].</li>
+                                    <li><strong>Google Docs:</strong> Cộng tác soạn thảo đồng thời, hạn chế mâu thuẫn nhờ chia chương mục [1].</li>
+                                    <li><strong>Google Drive:</strong> Lưu trữ tài nguyên, đồng bộ hóa quy tắc đặt tên [1].</li>
+                                    <li><strong>Google Meet / Discord:</strong> Họp chiến thuật trực tuyến, phản hồi nhanh chóng [1].</li>
                                 </ul>
                             </div>
-                            <p>Dù gặp khó khăn ban đầu về xung đột phiên bản và giao diện mới của Trello, bằng cách thảo luận thẳng thắn, đưa ra quy chế ghim tin quan trọng và phân quyền rõ ràng trên Docs, nhóm em đã hoàn thành dự án xuất sắc.</p>
                         </div>
                         <div class="visual-container">
                             <div class="diary-timeline">
                                 <div class="diary-item">
                                     <p class="diary-date">01/06/2026</p>
-                                    <p class="diary-desc">Nhận nhiệm vụ nghiên cứu, phân công công việc chi tiết trên Trello</p>
+                                    <p class="diary-desc">Nhận nhiệm vụ nghiên cứu, phân công công việc chi tiết trên Trello [1]</p>
                                 </div>
                                 <div class="diary-item">
                                     <p class="diary-date">04/06/2026</p>
-                                    <p class="diary-desc">Tìm kiếm tài liệu học thuật về AI học ngoại ngữ, đẩy lên Google Drive</p>
+                                    <p class="diary-desc">Tìm kiếm tài liệu học thuật về AI học ngoại ngữ, đẩy lên Google Drive [1]</p>
                                 </div>
                                 <div class="diary-item">
                                     <p class="diary-date">07/06/2026</p>
-                                    <p class="diary-desc">Cùng viết bài báo cáo tổng quan trực tiếp trên Google Docs</p>
+                                    <p class="diary-desc">Cùng viết bài báo cáo tổng quan trực tiếp trên Google Docs [1]</p>
                                 </div>
                                 <div class="diary-item">
                                     <p class="diary-date">15/06/2026</p>
-                                    <p class="diary-desc">Duyệt bài, phản hồi bình luận, kiểm duyệt dữ liệu nhóm</p>
+                                    <p class="diary-desc">Chỉnh sửa báo cáo, hoàn thiện slide và nộp đúng hạn [1]</p>
                                 </div>
                             </div>
                         </div>
@@ -1178,36 +1274,36 @@
                     <div class="exercise-title-area">
                         <div>
                             <span class="pane-badge">Generative AI</span>
-                            <h3>Bài 5: Sáng Tạo Nội Dung Với Generative AI</h3>
+                            <h3>Bài 5: Ứng Dụng AI Tạo Sinh Sáng Tạo Nội Dung</h3>
                         </div>
                     </div>
                     <div class="exercise-grid">
                         <div class="exercise-content-text">
-                            <p>Không gì diễn tả dữ liệu tuyệt vời bằng một infographic sinh động. Ở thử nghiệm này, em đóng vai trò nhà thiết kế chính, khai thác sức mạnh của bộ ba Generative AI bao gồm: <strong>ChatGPT, DALL-E và Canva AI</strong> để vẽ nên bức tranh trực quan về chủ đề: <em>"Ứng dụng AI trong học ngoại ngữ dành cho sinh viên"</em>.</p>
+                            <p>Trong việc xây dựng Infographic <strong>"Ứng dụng AI học ngoại ngữ"</strong>, sự liên kết nhịp nhàng giữa ChatGPT, DALL-E và Canva AI đã giúp giảm thiểu thời gian phác thảo ý tưởng thiết kế [1].</p>
                             
                             <div class="highlights">
-                                <h4><i data-lucide="donut-chart"></i> Phân chia Đóng góp Sáng tạo</h4>
-                                <ul>
-                                    <li><strong>AI Hỗ trợ (~45%):</strong> Khởi tạo bản thảo nội dung nền móng từ ChatGPT; Kiến tạo phong cách hình vẽ biểu tượng thông qua DALL-E (phong cách flat hiện đại, tone màu xanh lam trắng); Tạo khung layout ban đầu trên Canva.</li>
-                                    <li><strong>Sáng tạo Con người (~55%):</strong> Lọc lựa kỹ lưỡng ngôn từ cô đọng, tự vẽ biểu đồ, tinh chỉnh bố cục giãn cách khoảng cách hợp lý, tùy biến font chữ hài hòa và nhào nặn để infographic có một "linh hồn", mang tính cá nhân hóa sâu sắc của Hương.</li>
+                                <h4><i data-lucide="swatchbook"></i> Vai Trò Thực Tế Của AI</h4>
+                                <ul style="font-size: 0.9rem;">
+                                    <li><strong>ChatGPT:</strong> Thiết kế sườn thông tin thô, sau đó tinh lọc xuống 300 từ dạng gạch đầu dòng [1].</li>
+                                    <li><strong>DALL-E:</strong> Vẽ tranh minh họa vector phẳng (flat vector) tone màu lam-trắng đại diện cho công nghệ [1].</li>
+                                    <li><strong>Canva AI:</strong> Tạo khuôn layout cơ sở ban đầu, chỉnh sửa thủ công để tối ưu hóa icon [1].</li>
                                 </ul>
                             </div>
-                            <p>Trải nghiệm này củng cố sâu sắc triết lý: AI là cọ vẽ, còn con người mới thực sự là nghệ sĩ cầm cọ thổi hồn cho tác phẩm nghệ thuật.</p>
                         </div>
                         <div class="visual-container">
-                            <div style="text-align: center;">
-                                <div style="display:flex; justify-content:space-around; align-items:center; gap: 20px; margin-bottom: 20px;">
+                            <div style="text-align: center; width: 100%;">
+                                <div style="display:flex; justify-content:space-around; align-items:center; gap: 10px; margin-bottom: 20px;">
                                     <div style="background: rgba(72,202,228,0.1); border: 1px solid var(--accent-cyan); padding: 15px; border-radius: 50%; width: 100px; height: 100px; display:flex; flex-direction:column; justify-content:center; align-items:center;">
                                         <i data-lucide="bot" style="color:var(--accent-cyan);"></i>
-                                        <span style="font-size:0.75rem; margin-top:5px;">AI: 45%</span>
+                                        <span style="font-size:0.75rem; margin-top:5px;">AI: 45% [1]</span>
                                     </div>
                                     <i data-lucide="plus" style="color:var(--accent-sakura);"></i>
                                     <div style="background: rgba(255,179,198,0.1); border: 1px solid var(--accent-sakura); padding: 15px; border-radius: 50%; width: 100px; height: 100px; display:flex; flex-direction:column; justify-content:center; align-items:center;">
                                         <i data-lucide="user-check" style="color:var(--accent-sakura);"></i>
-                                        <span style="font-size:0.75rem; margin-top:5px;">Người: 55%</span>
+                                        <span style="font-size:0.75rem; margin-top:5px;">Hương: 55% [1]</span>
                                     </div>
                                 </div>
-                                <p style="font-size:0.85rem; color:var(--text-muted);">Sự kết hợp hoàn chỉnh tạo nên Infographic đột phá</p>
+                                <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.4;">Con người quyết định tính thẩm mỹ, hiệu đính lỗi sai và lựa chọn phong cách riêng của sản phẩm [1].</p>
                             </div>
                         </div>
                     </div>
@@ -1223,24 +1319,23 @@
                     </div>
                     <div class="exercise-grid">
                         <div class="exercise-content-text">
-                            <p>Là một thành viên dưới mái trường ULIS - ĐHQGHN, em luôn ý thức sâu sắc về nguyên tắc <strong>liêm chính học thuật</strong>. AI là một người trợ lý tuyệt vời, nhưng ranh giới giữa một công cụ tham vấn hợp lý và hành vi gian lận học thuật vô cùng mong manh.</p>
+                            <p>Sự liêm chính học thuật là thước đo năng lực tự học của sinh viên ĐHQGHN [1]. AI là phương tiện hỗ trợ thông minh chứ không thể tư duy thế chỗ cho bộ não con người [1].</p>
                             
                             <div class="highlights">
-                                <h4><i data-lucide="fingerprint"></i> Bộ Quy Tắc Đạo Đức Cá Nhân của Lê Hương</h4>
-                                <ol style="padding-left: 20px; color: var(--text-light); font-size: 0.9rem;">
-                                    <li style="margin-bottom: 8px;">Luôn coi AI là người hỗ trợ, tư vấn định hướng chứ không phải người làm thay bài luận.</li>
-                                    <li style="margin-bottom: 8px;">Xác thực, kiểm tra nguồn tin phản hồi từ AI, bảo đảm tính trung thực tuyệt đối.</li>
-                                    <li style="margin-bottom: 8px;">Nói không với việc sao chép nguyên văn nội dung AI tạo ra để nộp.</li>
-                                    <li style="margin-bottom: 8px;">Khai báo minh bạch hoạt động tham vấn AI trong lời mở đầu hoặc mục phương pháp nghiên cứu.</li>
-                                </ol>
+                                <h4><i data-lucide="shield-check"></i> Trách Nhiệm & Đạo Đức</h4>
+                                <p style="font-size: 0.9rem; margin: 0;">Mọi hoạt động trích nguồn tư liệu, số liệu do AI đề xuất phải được đối chiếu giáo trình học thuật nghiêm túc, khai báo trung thực trước khi nộp bài [1, 2].</p>
                             </div>
-                            <p>Cam kết sử dụng AI có trách nhiệm chính là bảo vệ quyền sở hữu trí tuệ của chính bản thân mình và phát triển bền vững khả năng tư duy độc lập trên con đường tri thức.</p>
                         </div>
-                        <div class="visual-container">
-                            <div style="border: 2px dashed rgba(255, 179, 198, 0.4); border-radius: 12px; padding: 25px; text-align: center; max-width: 320px;">
-                                <i data-lucide="shield-alert" style="color: var(--accent-sakura); font-size: 2.5rem; margin-bottom: 10px;"></i>
-                                <h4 style="color:#ffffff; margin-bottom: 10px;">Tôn Chỉ Liêm Chính</h4>
-                                <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">"Trí tuệ nhân tạo nhân đôi hiệu năng con người, nhưng sự liêm chính giữ cho tư duy chúng ta không bao giờ bị phụ thuộc."</p>
+                        <div class="visual-container" style="justify-content: flex-start; padding: 15px;">
+                            <div class="ethics-grid">
+                                <div class="ethics-card dos">
+                                    <h5><i data-lucide="check" style="color:#06d6a0; width:14px;"></i> Được dùng [1]</h5>
+                                    <p>Gợi ý tưởng, tóm tắt bài giảng, giải thích thuật ngữ khó hiểu, kiểm tra lỗi chính tả [1].</p>
+                                </div>
+                                <div class="ethics-card donts">
+                                    <h5><i data-lucide="x" style="color:#ef476f; width:14px;"></i> Cấm dùng [1]</h5>
+                                    <p>Để AI làm trọn bộ bài viết luận, sao chép 100% kết quả thô, không khai báo trung thực [1].</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1276,7 +1371,7 @@
                             </div>
                             <div>
                                 <p style="font-weight: 600; color: #ffffff; margin-bottom: 5px;">Sự hỗ trợ từ đồng đội</p>
-                                <p style="font-size: 0.9rem; color: var(--text-muted);">Làm việc nhóm cùng những người bạn tâm huyết giúp giải quyết hiệu quả các bài toán khó và cùng tiến bộ trong suốt quá trình thực hành.</p>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">Làm việc nhóm cùng những người bạn tâm huyết giúp giải quyết hiệu quả các bài toán khó và cùng tiến bộ trong suốt quá trình thực hành [1].</p>
                             </div>
                         </div>
                     </div>
@@ -1287,15 +1382,15 @@
                         <div class="grid-3-col">
                             <div>
                                 <p style="font-weight: 600; color: #ffffff; margin-bottom: 5px;">Xung đột dữ liệu khi cộng tác</p>
-                                <p style="font-size: 0.9rem; color: var(--text-muted);">Việc nhiều thành viên cùng chỉnh sửa báo cáo thời gian thực trên Docs đôi khi dẫn đến đè lấp thông tin trước khi đưa ra quy chế phân công cụ thể.</p>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">Việc nhiều thành viên cùng chỉnh sửa báo cáo thời gian thực trên Docs đôi khi dẫn đến đè lấp thông tin trước khi đưa ra quy chế phân công cụ thể [1].</p>
                             </div>
                             <div>
                                 <p style="font-weight: 600; color: #ffffff; margin-bottom: 5px;">Tính ảo tưởng của mô hình AI</p>
-                                <p style="font-size: 0.9rem; color: var(--text-muted);">Trí tuệ nhân tạo đôi khi đưa ra các thông tin mơ hồ, thiếu chính xác (hallucination) buộc em phải dành nhiều thời gian kiểm chứng học thuật thủ công.</p>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">Trí tuệ nhân tạo đôi khi đưa ra các thông tin mơ hồ, thiếu chính xác (hallucination) buộc em phải dành nhiều thời gian kiểm chứng học thuật thủ công [1].</p>
                             </div>
                             <div>
                                 <p style="font-weight: 600; color: #ffffff; margin-bottom: 5px;">Làm quen với các công cụ mới</p>
-                                <p style="font-size: 0.9rem; color: var(--text-muted);">Giao diện phân chia thẻ công việc của Trello lúc đầu khá xa lạ đối với một sinh viên ngôn ngữ chuyên ngành, đòi hỏi thời gian tự nghiên cứu tìm hiểu.</p>
+                                <p style="font-size: 0.9rem; color: var(--text-muted);">Giao diện phân chia thẻ công việc của Trello lúc đầu khá xa lạ đối với một sinh viên ngôn ngữ chuyên ngành, đòi hỏi thời gian tự nghiên cứu tìm hiểu [1].</p>
                             </div>
                         </div>
                     </div>
@@ -1304,9 +1399,9 @@
                     <div class="summary-box">
                         <h3><i data-lucide="graduation-cap"></i> Bài học kinh nghiệm</h3>
                         <ul class="list-unstyled">
-                            <li><strong>Chủ động làm chủ công nghệ:</strong> Hiểu rõ AI chỉ là người trợ lý đắc lực hỗ trợ tăng tốc, tư duy phản biện của con người mới là yếu tố quyết định chất lượng cuối cùng của sản phẩm.</li>
-                            <li><strong>Nguyên tắc giao tiếp rõ ràng:</strong> Quản lý nhóm thành công đòi hỏi sự phối hợp nhịp nhàng, quy tắc ghim tin rõ ràng trên các nền tảng trao đổi và tôn trọng sự đóng góp của mọi cá nhân.</li>
-                            <li><strong>Ý thức cao về tính trung thực:</strong> Luôn trích dẫn nguồn đầy đủ, minh bạch thông tin tham vấn AI để giữ vững giá trị liêm chính học thuật trong nhà trường.</li>
+                            <li><strong>Chủ động làm chủ công nghệ:</strong> Hiểu rõ AI chỉ là người trợ lý đắc lực hỗ trợ tăng tốc, tư duy phản biện của con người mới là yếu tố quyết định chất lượng cuối cùng của sản phẩm [1].</li>
+                            <li><strong>Nguyên tắc giao tiếp rõ ràng:</strong> Quản lý nhóm thành công đòi hỏi sự phối hợp nhịp nhàng, quy tắc ghim tin rõ ràng trên các nền tảng trao đổi và tôn trọng sự đóng góp của mọi cá nhân [1].</li>
+                            <li><strong>Ý thức cao về tính trung thực:</strong> Luôn trích dẫn nguồn đầy đủ, minh bạch thông tin tham vấn AI để giữ vững giá trị liêm chính học thuật trong nhà trường [1, 2].</li>
                         </ul>
                     </div>
                 </div>
@@ -1315,9 +1410,9 @@
 
         <!-- FOOTER -->
         <footer>
-            <p>© 2026 Nguyễn Thị Lê Hương - MSSV: 25041650. All Rights Reserved.</p>
+            <p>© 2026 Nguyễn Thị Lê Hương - MSSV: 25041650. All Rights Reserved. [1]</p>
             <p style="font-size: 0.8rem; color: rgba(255,255,255,0.3); margin-top: 10px;">
-                Cổng thông tin thuộc học phần Nhập môn công nghệ số và ứng dụng trí tuệ nhân tạo | Đại học Ngoại ngữ - ĐHQGHN
+                Cổng thông tin thuộc học phần Nhập môn công nghệ số và ứng dụng trí tuệ nhân tạo | Đại học Ngoại ngữ - ĐHQGHN [1, 2]
             </p>
         </footer>
 
@@ -1363,8 +1458,262 @@
             buttons[index].classList.add('active');
             panes[index].classList.add('active');
 
-            // Trigger re-layout for icons inside pane
             lucide.createIcons();
+        }
+
+        // --- EXERCISE 1 STEP-BY-STEP SIMULATOR DATA [1] ---
+        let currentSimStep = 1;
+        const simData = {
+            1: {
+                title: "Bước 1: Mở File Explorer",
+                desc: "Nhấn tổ hợp phím Windows + E hoặc nhấp vào biểu tượng thư mục màu vàng trên thanh tác vụ của Windows [1].",
+                mock: `<p style="color: #6272a4; margin-bottom: 10px;">// Trạng thái File Explorer [1]</p>
+                       <div class="tree-node"><i data-lucide="monitor"></i> This PC</div>
+                       <div class="tree-node" style="padding-left: 40px; color: var(--accent-cyan); font-weight: bold;"><i data-lucide="folder-search"></i> File Explorer (Đã kích hoạt)</div>`
+            },
+            2: {
+                title: "Bước 2: Truy cập ổ đĩa/thư mục",
+                desc: "Ở cột bên trái, nhấp vào This PC, sau đó nhấp đúp vào ổ đĩa phụ không phải ổ hệ thống (ví dụ ổ D:). Nếu máy chỉ có ổ C:, truy cập thư mục Documents [1].",
+                mock: `<p style="color: #6272a4; margin-bottom: 10px;">// Chọn ổ đĩa lưu trữ [1]</p>
+                       <div class="tree-node"><i data-lucide="monitor"></i> This PC</div>
+                       <div class="tree-node" style="padding-left: 40px;"><i data-lucide="hard-drive"></i> OS (C:)</div>
+                       <div class="tree-node" style="padding-left: 40px; color: var(--accent-cyan); font-weight: bold;"><i data-lucide="hard-drive"></i> New Volume (D:) [Chọn]</div>`
+            },
+            3: {
+                title: "Bước 3: Tạo thư mục thực hành mới",
+                desc: "Nhấp chuột phải vào khoảng trống bất kỳ -> Chọn New -> Chọn Folder. Đặt tên là 'ThucHanh_NguyenThiLeHuong' rồi nhấn Enter [1].",
+                mock: `<p style="color: #6272a4; margin-bottom: 10px;">// Tạo thư mục gốc [1]</p>
+                       <div class="tree-node"><i data-lucide="hard-drive"></i> New Volume (D:)</div>
+                       <div class="tree-node" style="padding-left: 40px; color: var(--accent-sakura); font-weight: bold;"><i data-lucide="folder-plus"></i> ThucHanh_NguyenThiLeHuong</div>`
+            },
+            4: {
+                title: "Bước 4: Truy cập thư mục vừa tạo",
+                desc: "Nhấp đúp chuột vào thư mục ThucHanh_NguyenThiLeHuong vừa tạo ở bước trước [1].",
+                mock: `<p style="color: #6272a4; margin-bottom: 10px;">// Bên trong thư mục gốc [1]</p>
+                       <div class="tree-node" style="color: var(--accent-mint);"><i data-lucide="folder-open"></i> ThucHanh_NguyenThiLeHuong</div>
+                       <div class="tree-node" style="padding-left: 40px; font-style: italic; color: #6272a4;">(Thư mục trống)</div>`
+            },
+            5: {
+                title: "Bước 5: Tạo tệp tin văn bản GhiChu",
+                desc: "Nhấp chuột phải vào khoảng trống bất kỳ bên trong thư mục -> Chọn New -> Chọn Text Document. Đặt tên tệp tin là GhiChu.txt và nhấn Enter [1].",
+                mock: `<p style="color: #6272a4; margin-bottom: 10px;">// Khởi tạo tệp tin [1]</p>
+                       <div class="tree-node"><i data-lucide="folder-open"></i> ThucHanh_NguyenThiLeHuong</div>
+                       <div class="tree-node file" style="padding-left: 40px; color: var(--accent-gold);"><i data-lucide="file-plus"></i> GhiChu.txt</div>`
+            },
+            6: {
+                title: "Bước 6: Đổi tên tệp tin",
+                desc: "Nhấp chuột phải vào tệp GhiChu.txt -> Chọn lệnh Rename. Thay đổi tên thành GhiChuQuanTrong.txt rồi nhấn phím Enter để xác nhận [1].",
+                mock: `<p style="color: #6272a4; margin-bottom: 10px;">// Thực hiện Rename [1]</p>
+                       <div class="tree-node"><i data-lucide="folder-open"></i> ThucHanh_NguyenThiLeHuong</div>
+                       <div class="tree-node file" style="padding-left: 40px; color: var(--accent-cyan); font-weight: bold;"><i data-lucide="file-text"></i> GhiChuQuanTrong.txt</div>`
+            },
+            7: {
+                title: "Bước 7: Tạo thêm thư mục con",
+                desc: "Bên trong thư mục thực hành chính, tiếp tục nhấp chuột phải -> Chọn New -> Folder. Đặt tên thư mục con này là TaiLieu [1].",
+                mock: `<p style="color: #6272a4; margin-bottom: 10px;">// Phân nhánh cấu trúc [1]</p>
+                       <div class="tree-node"><i data-lucide="folder-open"></i> ThucHanh_NguyenThiLeHuong</div>
+                       <div class="tree-node" style="padding-left: 40px; color: var(--accent-sakura);"><i data-lucide="folder"></i> TaiLieu</div>
+                       <div class="tree-node file" style="padding-left: 40px;"><i data-lucide="file-text"></i> GhiChuQuanTrong.txt</div>`
+            },
+            8: {
+                title: "Bước 8: Thực hiện sao chép tệp tin",
+                desc: "Nhấp chuột phải vào tệp GhiChuQuanTrong.txt -> Chọn Copy (hoặc nhấn Ctrl + C). Truy cập thư mục TaiLieu, nhấp chuột phải -> Chọn Paste (hoặc nhấn Ctrl + V) để nhân bản tệp [1].",
+                mock: `<p style="color: #6272a4; margin-bottom: 10px;">// Bản sao lưu xuất hiện trong thư mục con [1]</p>
+                       <div class="tree-node"><i data-lucide="folder-open"></i> TaiLieu</div>
+                       <div class="tree-node file" style="padding-left: 40px; color: var(--accent-mint);"><i data-lucide="file-text"></i> GhiChuQuanTrong.txt (Bản sao)</div>`
+            },
+            9: {
+                title: "Bước 9: Di chuyển tệp tin khác",
+                desc: "Quay lại thư mục chính, tạo một tệp mới tên là DiChuyen.txt. Nhấp chuột phải vào tệp đó -> Chọn Cut (hoặc nhấn Ctrl + X). Vào thư mục TaiLieu và chọn Paste (hoặc nhấn Ctrl + V) [1].",
+                mock: `<p style="color: #6272a4; margin-bottom: 10px;">// Di chuyển tệp tin (Tệp gốc đã biến mất) [1]</p>
+                       <div class="tree-node"><i data-lucide="folder-open"></i> TaiLieu</div>
+                       <div class="tree-node file" style="padding-left: 40px;"><i data-lucide="file-text"></i> GhiChuQuanTrong.txt (Bản sao)</div>
+                       <div class="tree-node file" style="padding-left: 40px; color: var(--accent-cyan); font-weight: bold;"><i data-lucide="file-text"></i> DiChuyen.txt</div>`
+            },
+            10: {
+                title: "Bước 10: Xóa tệp tin",
+                desc: "Truy cập thư mục TaiLieu, nhấp chuột phải vào tệp GhiChuQuanTrong.txt -> Chọn lệnh Delete. Hệ thống sẽ chuyển tệp tin này vào Thùng rác (Recycle Bin) [1].",
+                mock: `<p style="color: #6272a4; margin-bottom: 10px;">// Trạng thái sau khi xóa [1]</p>
+                       <div class="tree-node"><i data-lucide="folder-open"></i> TaiLieu</div>
+                       <div class="tree-node file" style="padding-left: 40px;"><i data-lucide="file-text"></i> DiChuyen.txt</div>`
+            },
+            11: {
+                title: "Bước 11: Thực hiện xóa vĩnh viễn tệp tin",
+                desc: "Chọn tệp DiChuyen.txt, nhấn giữ phím Shift và nhấn phím Delete trên bàn phím. Nhấp chọn Có (Yes) trên bảng cảnh báo của hệ thống Windows để xóa vĩnh viễn tệp này [1].",
+                mock: `<p style="color: #ff5555; margin-bottom: 10px;">⚠️ Cảnh báo: Bạn có chắc chắn muốn xóa vĩnh viễn? [1]</p>
+                       <div style="border: 1px solid rgba(255,85,85,0.4); padding: 10px; border-radius: 8px; font-size: 0.8rem;">
+                         <span>Tệp tin 'DiChuyen.txt' sẽ bị xóa vĩnh viễn khỏi máy tính mà không qua Thùng rác.</span>
+                       </div>`
+            },
+            12: {
+                title: "Bước 12: Khôi phục tệp từ Thùng rác",
+                desc: "Tìm biểu tượng Thùng rác trên màn hình Desktop, nhấp đúp để mở. Tìm tệp GhiChuQuanTrong.txt, nhấp chuột phải và chọn Restore để tệp trở lại vị trí ban đầu [1].",
+                mock: `<p style="color: #50fa7b; margin-bottom: 10px;">✨ Khôi phục hoàn tất! [1]</p>
+                       <div class="tree-node"><i data-lucide="folder-open"></i> TaiLieu</div>
+                       <div class="tree-node file" style="padding-left: 40px; color: #50fa7b;"><i data-lucide="file-text"></i> GhiChuQuanTrong.txt (Đã khôi phục)</div>`
+            }
+        };
+
+        function updateSimStep() {
+            document.getElementById('sim-step-title').innerHTML = `<i data-lucide="play-circle"></i> ` + simData[currentSimStep].title;
+            document.getElementById('sim-step-desc').innerText = simData[currentSimStep].desc;
+            document.getElementById('simulator-mockup').innerHTML = simData[currentSimStep].mock;
+            document.getElementById('sim-indicator').innerText = `Bước ${currentSimStep} / 12`;
+
+            document.getElementById('sim-prev').disabled = currentSimStep === 1;
+            document.getElementById('sim-next').disabled = currentSimStep === 12;
+
+            lucide.createIcons();
+        }
+
+        function nextStep() {
+            if (currentSimStep < 12) {
+                currentSimStep++;
+                updateSimStep();
+            }
+        }
+
+        function prevStep() {
+            if (currentSimStep > 1) {
+                currentSimStep--;
+                updateSimStep();
+            }
+        }
+
+        // --- EXERCISE 2 INTERACTIVE FILTER DATA [1, 2] ---
+        const academicSources = [
+            { id: 1, title: "Junco (2012)", type: "journal", desc: "Tạp chí khoa học", method: "Phân tích thống kê", citations: "Cao", currency: "Khá mới", trust: "Rất cao" },
+            { id: 2, title: "Rosen (2013)", type: "journal", desc: "Tạp chí uy tín", method: "Thực nghiệm trực tiếp", citations: "Cao", currency: "Khá mới", trust: "Rất cao" },
+            { id: 3, title: "Kirschner (2010)", type: "journal", desc: "Học giả độc lập", method: "Nghiên cứu so sánh", citations: "Cao", currency: "Cũ hơn", trust: "Cao" },
+            { id: 4, title: "Al-Menayes (2015)", type: "journal", desc: "Tạp chí chuyên ngành", method: "Khảo sát thực tế", citations: "Trung bình", currency: "Mới", trust: "Khá cao" },
+            { id: 5, title: "Paul (2012)", type: "journal", desc: "Nhóm nghiên cứu", method: "Phân tích dữ liệu số", citations: "Trung bình", currency: "Trung bình", trust: "Khá" },
+            { id: 6, title: "Lepp (2014)", type: "journal", desc: "Giáo sư trường ĐH", method: "Phương pháp thực nghiệm", citations: "Cao", currency: "Trung bình", trust: "Cao" },
+            { id: 7, title: "Carr (2010)", type: "book", desc: "Sách chuyên khảo", method: "Hệ thống lý luận", citations: "Cao", currency: "Cũ", trust: "Khá cao" },
+            { id: 8, title: "Turkle (2015)", type: "book", desc: "Sách chuyên khảo MIT", method: "Phỏng vấn chuyên sâu", citations: "Cao", currency: "Mới", trust: "Rất cao" },
+            { id: 9, title: "Pew Research (2021)", type: "report", desc: "Báo cáo uy tín tổ chức", method: "Khảo sát diện rộng", citations: "Cao", currency: "Rất mới", trust: "Rất cao" },
+            { id: 10, title: "OECD (2019)", type: "report", desc: "Báo cáo quốc tế", method: "Dữ liệu lớn học tập", citations: "Rất cao", currency: "Mới", trust: "Rất cao" },
+            { id: 11, title: "Edutopia (2020)", type: "web", desc: "Website giáo dục mở", method: "Tổng hợp thông tin", citations: "Trung bình", currency: "Mới", trust: "Khá" },
+            { id: 12, title: "Blog học thuật (2022)", type: "web", desc: "Internet mở cá nhân", method: "Tổng hợp thông tin", citations: "Thấp", currency: "Mới", trust: "Trung bình" }
+        ];
+
+        function populateAcademicTable(filterType = 'all') {
+            const table = document.getElementById('academic-eval-table');
+            let rowsHtml = `
+                <thead>
+                    <tr>
+                        <th>Tài liệu [2]</th>
+                        <th>Loại nguồn [2]</th>
+                        <th>Phương pháp [2]</th>
+                        <th>Độ tin cậy [2]</th>
+                    </tr>
+                </thead>
+                <tbody>
+            `;
+
+            const filtered = filterType === 'all' ? academicSources : academicSources.filter(s => s.type === filterType);
+            
+            filtered.forEach(s => {
+                rowsHtml += `
+                    <tr style="animation: smoothFadeIn 0.4s ease forwards;">
+                        <td style="font-weight:600; color: #ffffff;">${s.title}</td>
+                        <td>${s.desc}</td>
+                        <td>${s.method}</td>
+                        <td style="color: ${s.trust.includes('Rất') ? '#50fa7b' : '#8ce8ff'}; font-weight:600;">${s.trust}</td>
+                    </tr>
+                `;
+            });
+
+            rowsHtml += `</tbody>`;
+            table.innerHTML = rowsHtml;
+        }
+
+        function filterSources(type) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            populateAcademicTable(type);
+        }
+
+        // --- EXERCISE 3 INTERACTIVE PROMPT PLAYGROUND DATA [1] ---
+        let currentPromptTask = 1;
+        let currentPromptLevel = 'basic';
+        const promptData = {
+            1: {
+                basic: {
+                    badge: "Basic Task 1 [1]",
+                    badgeClass: "badge-basic",
+                    code: 'Hãy tóm tắt bài viết "Climate Change and Global Warming" [1].'
+                },
+                improved: {
+                    badge: "Improved Task 1 [1]",
+                    badgeClass: "badge-improved",
+                    code: 'Hãy tóm tắt bài viết "Climate Change and Global Warming" thành khoảng 300 từ. Chia thành các mục: Nguyên nhân, Hậu quả và Giải pháp. Trình bày bằng gạch đầu dòng và chỉ giữ lại thông tin quan trọng [1].'
+                },
+                advanced: {
+                    badge: "Advanced Task 1 [1]",
+                    badgeClass: "badge-advanced",
+                    code: 'Bạn là giảng viên môn Khoa học Môi trường. Hãy tóm tắt bài viết theo các mục Nguyên nhân, Hậu quả, Giải pháp; chỉ giữ ý quan trọng; liệt kê 5 từ khóa; thêm câu ghi nhớ sau mỗi mục và bảng tổng hợp cuối bài [1].'
+                }
+            },
+            2: {
+                basic: {
+                    badge: "Basic Task 2 [1]",
+                    badgeClass: "badge-basic",
+                    code: 'Giải thích điện toán đám mây [1].'
+                },
+                improved: {
+                    badge: "Improved Task 2 [1]",
+                    badgeClass: "badge-improved",
+                    code: 'Giải thích đơn giản về điện toán đám mây cho sinh viên năm nhất CNTT, có ví dụ thực tế và chỉ rõ ưu nhược điểm cốt lõi [1].'
+                },
+                advanced: {
+                    badge: "Advanced Task 2 [1]",
+                    badgeClass: "badge-advanced",
+                    code: 'Bạn là giảng viên công nghệ thông tin. Hãy giải thích điện toán đám mây bằng sơ đồ định nghĩa, so sánh chi tiết các mô hình IaaS, PaaS, SaaS kèm 3 câu hỏi kiểm tra nhanh hiểu biết của học viên [1].'
+                }
+            },
+            3: {
+                basic: {
+                    badge: "Basic Task 3 [1]",
+                    badgeClass: "badge-basic",
+                    code: 'Hãy tạo câu hỏi ôn tập về hệ điều hành [1].'
+                },
+                improved: {
+                    badge: "Improved Task 3 [1]",
+                    badgeClass: "badge-improved",
+                    code: 'Hãy tạo 15 câu hỏi trắc nghiệm ôn tập về hệ điều hành, cấu trúc gồm 4 đáp án lựa chọn, đánh dấu đáp án đúng và kèm lời giải thích ngắn sau mỗi câu hỏi [1].'
+                },
+                advanced: {
+                    badge: "Advanced Task 3 [1]",
+                    badgeClass: "badge-advanced",
+                    code: 'Bạn là giảng viên bộ môn Hệ điều hành. Hãy tạo một đề cương câu hỏi ôn tập gồm: 10 câu trắc nghiệm dễ, 10 câu mức trung bình và 5 câu mức vận dụng cao; yêu cầu có đáp án chi tiết và cuối cùng tổng kết các lỗi sai SV thường mắc [1].'
+                }
+            }
+        };
+
+        function switchPromptTask(taskIndex) {
+            currentPromptTask = taskIndex;
+            document.querySelectorAll('.prompt-tab').forEach((tab, index) => {
+                if (index === taskIndex - 1) tab.classList.add('active');
+                else tab.classList.remove('active');
+            });
+            updatePromptDisplay();
+        }
+
+        function changePromptLevel(level) {
+            currentPromptLevel = level;
+            updatePromptDisplay();
+        }
+
+        function updatePromptDisplay() {
+            const data = promptData[currentPromptTask][currentPromptLevel];
+            const titleEl = document.getElementById('prompt-level-title');
+            const badgeEl = document.getElementById('prompt-level-badge');
+            const codeEl = document.getElementById('prompt-display-box');
+
+            titleEl.innerText = currentPromptLevel.charAt(0).toUpperCase() + currentPromptLevel.slice(1);
+            badgeEl.innerText = data.badge;
+            badgeEl.className = `prompt-badge ${data.badgeClass}`;
+            codeEl.innerText = data.code;
         }
 
         // --- CANVA BLOSSOMS FALLING SYSTEM ---
@@ -1379,29 +1728,27 @@
             height = canvas.height = window.innerHeight;
         });
 
-        // Delicate Petal Object
         class Petal {
             constructor() {
                 this.x = Math.random() * width;
                 this.y = Math.random() * -height;
-                this.size = Math.random() * 5 + 3; // soft small petals
+                this.size = Math.random() * 5 + 3;
                 this.speedY = Math.random() * 1.5 + 0.8;
                 this.speedX = Math.random() * 1 - 0.5;
                 this.rotation = Math.random() * 360;
                 this.rotationSpeed = Math.random() * 2 - 1;
-                // Pastel colors matching back.jpg (pale blue, glowing white, cream gold)
                 const colorPalette = [
-                    'rgba(255, 255, 255, 0.7)',     // glowing white
-                    'rgba(144, 224, 239, 0.55)',   // magical light blue
-                    'rgba(254, 228, 64, 0.5)',     // pale yellow blossom
-                    'rgba(255, 179, 198, 0.45)'    // dreamy pink petal
+                    'rgba(255, 255, 255, 0.7)',
+                    'rgba(144, 224, 239, 0.55)',
+                    'rgba(254, 228, 64, 0.5)',
+                    'rgba(255, 179, 198, 0.45)'
                 ];
                 this.color = colorPalette[Math.floor(Math.random() * colorPalette.length)];
             }
 
             update() {
                 this.y += this.speedY;
-                this.x += this.speedX + Math.sin(this.y / 30) * 0.3; // wind drift effect
+                this.x += this.speedX + Math.sin(this.y / 30) * 0.3;
                 this.rotation += this.rotationSpeed;
 
                 if (this.y > height) {
@@ -1415,16 +1762,11 @@
                 ctx.translate(this.x, this.y);
                 ctx.rotate(this.rotation * Math.PI / 180);
                 ctx.fillStyle = this.color;
-                
-                // Draw delicate flower petal shape
                 ctx.beginPath();
                 ctx.ellipse(0, 0, this.size, this.size * 1.6, 0, 0, 2 * Math.PI);
                 ctx.fill();
-                
-                // Add a soft glow effect to petals
                 ctx.shadowBlur = 10;
                 ctx.shadowColor = this.color;
-
                 ctx.restore();
             }
         }
@@ -1443,11 +1785,13 @@
             requestAnimationFrame(animatePetals);
         }
 
-        // Start Petals falling animation
-        animatePetals();
-
-        // Initialize Lucide icons
-        lucide.createIcons();
+        // On window load initialization
+        window.addEventListener('load', () => {
+            updateSimStep();
+            populateAcademicTable('all');
+            updatePromptDisplay();
+            animatePetals();
+        });
     </script>
 </body>
 </html>
